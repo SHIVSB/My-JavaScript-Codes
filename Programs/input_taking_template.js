@@ -1,20 +1,20 @@
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.resume();//begin reading from stdin so the process does not exit
+process.stdin.setEncoding('utf-8');//this will set allowed character set to be utf-8
  
-let inputString = "";
-let currentLine = 0;
+let inputString = ""; // this will store the complete input in stdin and we will later process
+let currentLine = 0;//this will maintain the curernt line of input we are in
  
 process.stdin.on('data', function (userInput) {
     inputString = inputString + userInput;
 });
  
-process.stdin.on('end', function() { // ctrl + d
-    inputString.trim();
-    inputString = inputString.split("\n");
-    main();
+process.stdin.on('end', function() { // ctrl + d ->as soon as user stops typing input
+    inputString.trim();//remove the trailing and leading white spaces
+    inputString = inputString.split("\n");//split the input string into an array of strings where each string is a line of input
+    main();//call the main function
 });
  
-function readline() {
+function readline() {//this function will read the input from stdin
     let result = inputString[currentLine];
     currentLine = currentLine + 1;
     return result;
