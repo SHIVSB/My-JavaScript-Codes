@@ -1,4 +1,4 @@
-let dp = Array(100).fill(-1);
+let dp = Array(10001).fill(-1);
 
 function fib(n){
     if(n==0){
@@ -6,6 +6,7 @@ function fib(n){
     }else if(n==1){
         return 1;
     }
+
     if(dp[n] != -1){
         return dp[n];
     }
@@ -13,4 +14,4 @@ function fib(n){
     return dp[n];
 }
 
-console.log(fib(90));
+console.log(fib(1000));
