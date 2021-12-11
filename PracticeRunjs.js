@@ -1,16 +1,20 @@
-let dp = Array(100).fill(-1);
+//narscisstic number
 
-function fib(n){
-    if(n==0){
-        return 0;
-    }else if(n==1){
-        return 1;
-    }
-    if(dp[n] != -1){
-        return dp[n];
-    }
-    dp[n] = fib(n-1) + fib(n-2);
-    return dp[n];
+let n = 10000;
+
+for(let i=0; i<=n; i++){
+  let s = "" + i;
+  let num_length = s.length;
+  let temp = i;
+  let sum = 0;
+  while(temp>0){
+    sum += Math.pow(temp%10,num_length);
+    temp = Math.floor(temp/10);
+  }
+  
+  if(sum == i){
+    console.log(i);
+  }
 }
 
-console.log(fib(90));
+
