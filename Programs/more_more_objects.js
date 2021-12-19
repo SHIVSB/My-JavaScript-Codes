@@ -8,9 +8,9 @@ function Person(name,age){
 
 const person1 = new Person("Shiv",20);
 
-person1.nationality = "American";
+person1.nationality = "American"; 
 
 const person2 = new Person("Shivanshu",20);
-Person.prototype.nationality = "Indian"; // Hoisting
+Person.prototype.nationality = "Indian"; // Hoisting// Prototype
 console.log(person1.nationality);
 console.log(person2.nationality);
