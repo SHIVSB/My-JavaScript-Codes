@@ -1,1 +1,1 @@
-console.log(s);
+person1.nationality = "American";
