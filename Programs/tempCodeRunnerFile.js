@@ -1,1 +1,5 @@
-person1.nationality = "American";
+var s = "* * * * * ";
+
+
+function star(n,k){
+    var sp = 4*(k - (s.length/2));
