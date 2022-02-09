@@ -36,13 +36,15 @@ class Stack {
 const st = new Stack();
 
 //let arr = ["(", "(", ")"];
-let arr = ["(","(",")",")"]
+let arr = ["(", "(", ")", ")", "(", ")", "(", "(", ")", ")", ")"];
 
 for (let i = 0; i < arr.length; i++) {
   if (st.isEmpty()) {
     st.push(arr[i]);
   } else if (st.peek() != arr[i]) {
     st.pop();
+  } else if (st.peek() == ")" && arr[i] == "(") {
+    break;
   } else {
     st.push(arr[i]);
   }

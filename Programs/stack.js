@@ -76,7 +76,7 @@ st.push(800);
 reverse(st);
 
 console.log(st.peek());
-// st.pop();
-// console.log(st.peek());
-// st.pop();
-// console.log(st.peek());
+st.pop();
+console.log(st.peek());
+st.pop();
+console.log(st.peek());
