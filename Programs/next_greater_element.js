@@ -102,7 +102,7 @@ function prevGreater(arr) {
 function nextGreater(arr) {
   const st = new Stack();
 
-  st.push(0);
+  st.push(0); // pushing the index
 
   let output = new Array(arr.length);
 

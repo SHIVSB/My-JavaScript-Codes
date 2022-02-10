@@ -1,4 +1,1 @@
-function minSubarray(arr){
-//     let psi = 
-//     let nsi = 
-// }
+q.reverseQueue();
