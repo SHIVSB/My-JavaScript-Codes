@@ -299,6 +299,23 @@ function is_bst(root) {
   }
 }
 
+//bst better method
+
+function bst2(root, mininum, maximum) {
+  if (root.left == null && root.right == null) {
+    return true;
+  }
+
+  if (root.data > root.left.data && root.data < root.right.data) {
+    return (
+      bst2(root.left, mininum, root.data) &&
+      bst2(root.right, root.data, maximum)
+    );
+  }
+
+  return false;
+}
+
 let root = new node(10);
 root.left = new node(20);
 root.right = new node(30);
